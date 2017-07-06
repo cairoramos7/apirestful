@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Error Cors</title>
+</head>
+<body>
+	<p id="log"></p>
+	<script type="text/javascript">
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function () {
+			if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+				console.log(xmlhttp.status, xmlhttp.responseText);
+			}
+		}
+		xmlhttp.open('GET', 'http://127.0.0.1:8000/api/accounts');
+		xmlhttp.setRequestHeader('Authorization', 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjAxOTg3OWQ1ZWQzMjQ3YzkxZDgyNmMzYzNiYzBmZWJiNmRiZWRhMTljOGFiMDhiNzNjZmM3N2ZkNDhkMjg2YjI5ZWFlNTk1NGExMzIwMTQxIn0.eyJhdWQiOiIyIiwianRpIjoiMDE5ODc5ZDVlZDMyNDdjOTFkODI2YzNjM2JjMGZlYmI2ZGJlZGExOWM4YWIwOGI3M2NmYzc3ZmQ0OGQyODZiMjllYWU1OTU0YTEzMjAxNDEiLCJpYXQiOjE0OTg1Nzc3OTMsIm5iZiI6MTQ5ODU3Nzc5MywiZXhwIjoxNTMwMTEzNzkzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.LFjIdX2DUpS8ChjkmQ5AyHS0m6jekwHeZblyKRSS6RjgGqF6KFEHdy19Ilvb2f6HiSuvLSs0HMabBcvcfJDdIn23kZWmQJKzscYz51bk6Ql8rD7AX3kUHVMmrOTM9Yur0tN0SzsXBdsr1RYtfWnNaV9l2L3Oq42-vpR1IuIQulFBSxyRLhk87qWgRlEW5EiuAJP9B_dag15Yp-P_lZ-LNJwiZRR2m2gPRBeyR-Se5GfGVucv5P_ueP7-pS9DdYvmaROzbvUbv8l4TrvDCS5carbnYvg_TsKc6We2GxHWUyAHr7MugfY3cwtgTCoEkVM3biFJWPPFtZMOR2QHK56z6qGk1cC8-Si19Z6JcH1BuGHpIlCh1NbWqS-WEh05hNeFwJ5ujBFhR13PSIlqofYT8PSAt0XsTsCTa3jKGkRtSNDRnYyG5jKvpqpe1FwpS_1RPO9-sCUrG2x-84k6vmfXRAq1e2lRDlMZ6UhNuZGl_9KkGpldZmg7laUyGWQzlsI-rvB1hZQB-zRWPuSVGUZu2FMEypXylzwROlpgbNKM_jpEVWNSrTb4lG5sFI00JcVB1wYXUNDVjcJyf4zKVSKUPAqC9Tr5Rd6qMJ-vKHDAWFjzffbu5lSKbkcv5tiozBcUE9H0f7MSJCIYFUrzaMXM-EpL0rtmE4bakhT0xnB4PA4');
+		xmlhttp.send();
+	</script>
+</body>
+</html>
